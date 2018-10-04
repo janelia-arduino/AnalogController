@@ -16,12 +16,19 @@ namespace dac_controller
 {
 namespace constants
 {
+//MAX values must be >= 1, >= created/copied count, < RAM limit
+enum{PIN_COUNT_MAX=1};
+
+enum {CHIP_COUNT=4};
+enum {CHANNEL_COUNT=16};
+
 // Pins
 
 // Units
 
 // Properties
 // Property values must be long, double, bool, long[], double[], bool[], char[], ConstantString *, (ConstantString *)[]
+extern const ConstantString * const range_default[CHANNEL_COUNT];
 
 // Parameters
 
