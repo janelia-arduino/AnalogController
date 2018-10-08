@@ -17,6 +17,39 @@
 * API NAMES
 
   #+BEGIN_SRC js
+    {
+      "id": "getApi",
+      "result": {
+        "firmware": [
+          "DacController"
+        ],
+        "verbosity": "NAMES",
+        "functions": [
+          "setDacValue",
+          "setDacValues",
+          "setAllDacValues",
+          "getDacValueMin",
+          "getDacValueMax",
+          "setVoltage",
+          "setVoltages",
+          "setAllVoltages",
+          "getVoltageMin",
+          "getVoltageMax",
+          "beginSimultaneousUpdate",
+          "simultaneousUpdate"
+        ],
+        "parameters": [
+          "channel",
+          "dac_value",
+          "dac_values",
+          "voltage",
+          "voltages"
+        ],
+        "properties": [
+          "range"
+        ]
+      }
+    }
   #+END_SRC
 
 * API GENERAL

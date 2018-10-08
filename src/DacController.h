@@ -28,6 +28,9 @@ public:
   DacController();
   virtual void setup();
 
+  void setDacValues(Array<long,dac_controller::constants::CHANNEL_COUNT> dac_values);
+  void setVoltages(Array<double,dac_controller::constants::CHANNEL_COUNT> voltages);
+
 private:
   modular_server::Pin pins_[dac_controller::constants::PIN_COUNT_MAX];
 
@@ -38,7 +41,18 @@ private:
 
   // Handlers
   void postSetRangeElementValueHandler(const size_t channel);
-  void analogWriteHandler();
+  void setDacValueHandler();
+  void setDacValuesHandler();
+  void setAllDacValuesHandler();
+  void getDacValueMinHandler();
+  void getDacValueMaxHandler();
+  void setVoltageHandler();
+  void setVoltagesHandler();
+  void setAllVoltagesHandler();
+  void getVoltageMinHandler();
+  void getVoltageMaxHandler();
+  void beginSimultaneousUpdateHandler();
+  void simultaneousUpdateHandler();
 
 };
 

@@ -54,12 +54,31 @@ const ConstantString * const range_element_ptr_default = &range_bipolar_10v;
 // Parameters
 CONSTANT_STRING(channel_parameter_name,"channel");
 
-CONSTANT_STRING(value_parameter_name,"value");
-const long value_min = -32768;
-const long value_max = 65536;
+CONSTANT_STRING(dac_value_parameter_name,"dac_value");
+const long dac_value_min = -32768;
+const long dac_value_max = 65535;
+
+CONSTANT_STRING(dac_values_parameter_name,"dac_values");
+
+CONSTANT_STRING(voltage_parameter_name,"voltage");
+const double voltage_min = -10.8;
+const double voltage_max = 10.8;
+
+CONSTANT_STRING(voltages_parameter_name,"voltages");
 
 // Functions
-CONSTANT_STRING(analog_write_function_name,"analogWrite");
+CONSTANT_STRING(set_dac_value_function_name,"setDacValue");
+CONSTANT_STRING(set_dac_values_function_name,"setDacValues");
+CONSTANT_STRING(set_all_dac_values_function_name,"setAllDacValues");
+CONSTANT_STRING(get_dac_value_min_function_name,"getDacValueMin");
+CONSTANT_STRING(get_dac_value_max_function_name,"getDacValueMax");
+CONSTANT_STRING(set_voltage_function_name,"setVoltage");
+CONSTANT_STRING(set_voltages_function_name,"setVoltages");
+CONSTANT_STRING(set_all_voltages_function_name,"setAllVoltages");
+CONSTANT_STRING(get_voltage_min_function_name,"getVoltageMin");
+CONSTANT_STRING(get_voltage_max_function_name,"getVoltageMax");
+CONSTANT_STRING(begin_simultaneous_update_function_name,"beginSimultaneousUpdate");
+CONSTANT_STRING(simultaneous_update_function_name,"simultaneousUpdate");
 
 // Callbacks
 
