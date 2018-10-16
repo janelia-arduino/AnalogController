@@ -40,7 +40,7 @@ private:
   modular_server::Callback callbacks_[dac_controller::constants::CALLBACK_COUNT_MAX];
 
   // Handlers
-  void postSetRangeElementValueHandler(const size_t channel);
+  void postSetRangeElementValueHandler(size_t channel);
   void setDacValueHandler();
   void setDacValuesHandler();
   void setAllDacValuesHandler();

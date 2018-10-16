@@ -47,7 +47,7 @@ void DacController::setup()
   // Properties
   modular_server::Property & range_property = modular_server_.createProperty(constants::range_property_name,constants::range_default);
   range_property.setSubset(constants::range_ptr_subset);
-  range_property.attachPostSetElementValueFunctor(makeFunctor((Functor1<const size_t> *)0,*this,&DacController::postSetRangeElementValueHandler));
+  range_property.attachPostSetElementValueFunctor(makeFunctor((Functor1<size_t> *)0,*this,&DacController::postSetRangeElementValueHandler));
 
   for (size_t channel=0; channel<constants::CHANNEL_COUNT; ++channel)
   {
@@ -166,7 +166,7 @@ void DacController::setVoltages(Array<double,dac_controller::constants::CHANNEL_
 // modular_server_.property(property_name).getElementValue(element_index,value) value type must match the property array element default type
 // modular_server_.property(property_name).setElementValue(element_index,value) value type must match the property array element default type
 
-void DacController::postSetRangeElementValueHandler(const size_t channel)
+void DacController::postSetRangeElementValueHandler(size_t channel)
 {
   modular_server::Property & property = modular_server_.property(constants::range_property_name);
   const ConstantString * range_ptr;
