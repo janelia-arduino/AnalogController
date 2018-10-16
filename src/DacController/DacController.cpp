@@ -33,16 +33,16 @@ void DacController::setup()
 
   // Add Hardware
   modular_server_.addHardware(constants::hardware_info,
-                              pins_);
+    pins_);
 
   // Pins
 
   // Add Firmware
   modular_server_.addFirmware(constants::firmware_info,
-                              properties_,
-                              parameters_,
-                              functions_,
-                              callbacks_);
+    properties_,
+    parameters_,
+    functions_,
+    callbacks_);
 
   // Properties
   modular_server::Property & range_property = modular_server_.createProperty(constants::range_property_name,constants::range_default);
