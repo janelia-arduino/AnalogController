@@ -2,31 +2,31 @@
   "id": "getApi",
   "result": {
     "firmware": [
-      "DacController"
+      "AnalogController"
     ],
     "verbosity": "GENERAL",
     "functions": [
       {
-        "name": "setDacValue",
+        "name": "setAnalogValue",
         "parameters": [
           "channel",
-          "dac_value"
+          "analog_value"
         ]
       },
       {
-        "name": "setDacValues",
+        "name": "setAnalogValues",
         "parameters": [
-          "dac_values"
+          "analog_values"
         ]
       },
       {
-        "name": "setAllDacValues",
+        "name": "setAllAnalogValues",
         "parameters": [
-          "dac_value"
+          "analog_value"
         ]
       },
       {
-        "name": "getDacValueMin",
+        "name": "getAnalogValueMin",
         "parameters": [
           "channel"
         ],
@@ -35,7 +35,7 @@
         }
       },
       {
-        "name": "getDacValueMax",
+        "name": "getAnalogValueMax",
         "parameters": [
           "channel"
         ],
@@ -93,11 +93,11 @@
         "type": "long"
       },
       {
-        "name": "dac_value",
+        "name": "analog_value",
         "type": "long"
       },
       {
-        "name": "dac_values",
+        "name": "analog_values",
         "type": "array",
         "array_element_type": "long"
       },

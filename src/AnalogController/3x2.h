@@ -5,14 +5,14 @@
 // Authors:
 // Peter Polidoro peterpolidoro@gmail.com
 // ----------------------------------------------------------------------------
-#ifndef DAC_CONTROLLER_3X2_CONSTANTS_H
-#define DAC_CONTROLLER_3X2_CONSTANTS_H
+#ifndef ANALOG_CONTROLLER_3X2_CONSTANTS_H
+#define ANALOG_CONTROLLER_3X2_CONSTANTS_H
 #include "Constants.h"
 
 
 #if defined(__MK20DX256__)
 
-namespace dac_controller
+namespace analog_controller
 {
 namespace constants
 {

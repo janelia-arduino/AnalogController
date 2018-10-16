@@ -5,14 +5,14 @@
 // Authors:
 // Peter Polidoro peterpolidoro@gmail.com
 // ----------------------------------------------------------------------------
-#ifndef DAC_CONTROLLER_5X3_CONSTANTS_H
-#define DAC_CONTROLLER_5X3_CONSTANTS_H
+#ifndef ANALOG_CONTROLLER_5X3_CONSTANTS_H
+#define ANALOG_CONTROLLER_5X3_CONSTANTS_H
 #include "Constants.h"
 
 
 #if defined(__MK64FX512__)
 
-namespace dac_controller
+namespace analog_controller
 {
 namespace constants
 {

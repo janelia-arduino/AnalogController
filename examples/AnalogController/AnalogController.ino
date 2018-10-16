@@ -1,7 +1,7 @@
-#include <DacController.h>
+#include <AnalogController.h>
 
 
-DacController dev;
+AnalogController dev;
 
 void setup()
 {

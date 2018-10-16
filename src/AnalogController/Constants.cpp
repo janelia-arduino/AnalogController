@@ -8,13 +8,13 @@
 #include "Constants.h"
 
 
-namespace dac_controller
+namespace analog_controller
 {
 namespace constants
 {
-CONSTANT_STRING(device_name,"dac_controller");
+CONSTANT_STRING(device_name,"analog_controller");
 
-CONSTANT_STRING(firmware_name,"DacController");
+CONSTANT_STRING(firmware_name,"AnalogController");
 // Use semantic versioning http://semver.org/
 const modular_server::FirmwareInfo firmware_info =
 {
@@ -24,7 +24,7 @@ const modular_server::FirmwareInfo firmware_info =
   .version_patch=0,
 };
 
-CONSTANT_STRING(hardware_name,"dac_controller");
+CONSTANT_STRING(hardware_name,"analog_controller");
 
 const AD57X4R::Resolution resolution = AD57X4R::AD5754R;
 
@@ -54,11 +54,11 @@ const ConstantString * const range_element_ptr_default = &range_bipolar_10v;
 // Parameters
 CONSTANT_STRING(channel_parameter_name,"channel");
 
-CONSTANT_STRING(dac_value_parameter_name,"dac_value");
-const long dac_value_min = -32768;
-const long dac_value_max = 65535;
+CONSTANT_STRING(analog_value_parameter_name,"analog_value");
+const long analog_value_min = -32768;
+const long analog_value_max = 65535;
 
-CONSTANT_STRING(dac_values_parameter_name,"dac_values");
+CONSTANT_STRING(analog_values_parameter_name,"analog_values");
 
 CONSTANT_STRING(voltage_parameter_name,"voltage");
 const double voltage_min = -10.8;
@@ -67,11 +67,11 @@ const double voltage_max = 10.8;
 CONSTANT_STRING(voltages_parameter_name,"voltages");
 
 // Functions
-CONSTANT_STRING(set_dac_value_function_name,"setDacValue");
-CONSTANT_STRING(set_dac_values_function_name,"setDacValues");
-CONSTANT_STRING(set_all_dac_values_function_name,"setAllDacValues");
-CONSTANT_STRING(get_dac_value_min_function_name,"getDacValueMin");
-CONSTANT_STRING(get_dac_value_max_function_name,"getDacValueMax");
+CONSTANT_STRING(set_analog_value_function_name,"setAnalogValue");
+CONSTANT_STRING(set_analog_values_function_name,"setAnalogValues");
+CONSTANT_STRING(set_all_analog_values_function_name,"setAllAnalogValues");
+CONSTANT_STRING(get_analog_value_min_function_name,"getAnalogValueMin");
+CONSTANT_STRING(get_analog_value_max_function_name,"getAnalogValueMax");
 CONSTANT_STRING(set_voltage_function_name,"setVoltage");
 CONSTANT_STRING(set_voltages_function_name,"setVoltages");
 CONSTANT_STRING(set_all_voltages_function_name,"setAllVoltages");
