@@ -155,8 +155,8 @@ void AnalogController::setVoltages(Array<double,analog_controller::constants::CH
 // floating-point number (float, double)
 // bool
 // const char *
-// ArduinoJson::JsonArray *
-// ArduinoJson::JsonObject *
+// ArduinoJson::JsonArray
+// ArduinoJson::JsonObject
 // const ConstantString *
 //
 // For more info read about ArduinoJson parsing https://github.com/janelia-arduino/ArduinoJson
@@ -214,15 +214,13 @@ void AnalogController::setAnalogValueHandler()
 
 void AnalogController::setAnalogValuesHandler()
 {
-  ArduinoJson::JsonArray * analog_values_ptr;
-  modular_server_.parameter(constants::analog_values_parameter_name).getValue(analog_values_ptr);
+  ArduinoJson::JsonArray analog_values_ja;
+  modular_server_.parameter(constants::analog_values_parameter_name).getValue(analog_values_ja);
 
   Array<long,constants::CHANNEL_COUNT> analog_values;
-  for (ArduinoJson::JsonArray::iterator it=analog_values_ptr->begin();
-       it != analog_values_ptr->end();
-       ++it)
+  for (ArduinoJson::JsonVariant analog_value : analog_values_ja)
   {
-    analog_values.push_back(*it);
+    analog_values.push_back(analog_value);
   }
   setAnalogValues(analog_values);
 }
@@ -266,15 +264,13 @@ void AnalogController::setVoltageHandler()
 
 void AnalogController::setVoltagesHandler()
 {
-  ArduinoJson::JsonArray * voltages_ptr;
-  modular_server_.parameter(constants::voltages_parameter_name).getValue(voltages_ptr);
+  ArduinoJson::JsonArray voltages_ja;
+  modular_server_.parameter(constants::voltages_parameter_name).getValue(voltages_ja);
 
   Array<double,constants::CHANNEL_COUNT> voltages;
-  for (ArduinoJson::JsonArray::iterator it=voltages_ptr->begin();
-       it != voltages_ptr->end();
-       ++it)
+  for (ArduinoJson::JsonVariant voltage : voltages_ja)
   {
-    voltages.push_back(*it);
+    voltages.push_back(voltage);
   }
   setVoltages(voltages);
 }
